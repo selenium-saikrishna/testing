@@ -17,7 +17,7 @@ public class Testing {
 		String actmsg=driver.findElement(By.xpath("html/body")).getText();
 		System.out.println("Expected Message : "+expmsg);
 		System.out.println("Actual Message   : "+actmsg);
-		if(expmsg.equals(actmsg))
+		if(expmsg.contains(actmsg))
 		{
 			System.out.println("Testing Passed");
 		}
