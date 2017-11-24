@@ -13,17 +13,16 @@ public class Testing {
 		HtmlUnitDriver driver=new HtmlUnitDriver(BrowserVersion.FIREFOX_38);
 		driver.get("http://192.168.61.22:8080/qaenv");
 		String expmsg="Hello, World!";
-		Thread.sleep(5000)
 		String actmsg=driver.findElement(By.xpath("html/body")).getText();
 		System.out.println("Expected Message : "+expmsg);
 		System.out.println("Actual Message   : "+actmsg);
-		if(expmsg.contains(actmsg))
+		if(expmsg.equals(actmsg))
 		{
-			System.out.println("Testing Passed");
+			System.out.println("Testing has Passed");
 		}
 		else
 		{
-			System.out.println("Testing Failed");
+			System.out.println("Testing has Failed");
 		}
 		driver.close();
 	}
